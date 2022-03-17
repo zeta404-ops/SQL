@@ -1,5 +1,5 @@
 POST http://localhost:3001/api/reminders Content-Type: application/json
 
 {
-"name": "Buy turbo", "timestamp": "16:45"
+"name": "", "timestamp": "2022-03-17T13:50"
 }

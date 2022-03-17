@@ -13,7 +13,6 @@ const reminderSchema = new mongoose.Schema({
     name: String,
     timestamp: Date,
   })
-  doc.createdAt instanceof Date; // true
   
 const Reminder = mongoose.model('Reminder', reminderSchema);
 

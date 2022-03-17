@@ -10,12 +10,9 @@ app.use(cors())
 
 
 const formatReminder = (reminder) => {
-  const formattedNote = { name: reminder.name,
-    timestamp: reminder.timestamp,
-    id: reminder._id }
+  const formattedNote = { name: reminder.name, timestamp: reminder.timestamp, id: reminder._id }
   delete formattedNote._id
   delete formattedNote.__v
-
   return formattedNote
 }
 
@@ -23,22 +20,22 @@ const formatReminder = (reminder) => {
 let reminders = [
       {
         name: "Buy R19 Tyre's",
-        timestamp: "2022-5-10T13:00:00.141Z",
+        timestamp: "2022-5-30",
         id: 1
       },
       {
         name: "Buy Stage 2 Chip Tune",
-        timestamp: "2022-5-11T08:00:00.141Z",
+        timestamp: "2022-5-21",
         id: 2
       },
       {
         name: "Buy Spoiler",
-        timestamp: "2022-5-11T09:00:00.000Z",
+        timestamp: "2022-5-12",
         id: 3
       },
       {
         name: "Buy brake's",
-        timestamp: "2022-5-11T13:00:00.000Z",
+        timestamp: "2022-5-15",
         id: 4
       }
     ]

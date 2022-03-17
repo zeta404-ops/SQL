@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from "axios"
-import reminderService from "./services/reminders"
+import reminderServices from "./services/reminders"
 
 
 
@@ -15,7 +15,7 @@ class Reminder extends React.Component {
   }
 
       componentDidMount() {
-        reminderService
+        reminderServices
           .getAll()
           .then(reminders => {
             this.setState({ reminders })
@@ -36,7 +36,7 @@ class Reminder extends React.Component {
           this.setState({
             reminders: this.state.reminders.concat(response.data),
             newName: '',
-            newTime: ''
+            newTime: ""
           })
         })
 
@@ -60,7 +60,7 @@ class Reminder extends React.Component {
         window.confirm("Would you like to remove it") ?
         axios
         .delete(url)
-        (reminderService
+        (reminderServices
           .getAll()
           .then(reminders => {
             this.setState({ reminders })
@@ -96,7 +96,7 @@ class Reminder extends React.Component {
         <h2>Reminders</h2>
         {this.state.reminders.map(reminder => { return (
              <div key={reminder.id}>
-               <p>{reminder.timestamp} {reminder.name} <button onClick={this.deleteReminder(reminder.id)}>Delete</button></p>
+               <p> {reminder.timestamp} {reminder.name}  <button onClick={this.deleteReminder(reminder.id)}>Delete</button></p>
              </div>  
         )})}
       
